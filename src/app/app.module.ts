@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 @NgModule({
   imports: [BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
-  declarations: [AppComponent, BookComponent, DashboardComponent, BookDetailComponent, LoginComponent],
+  declarations: [AppComponent, DashboardComponent, BookDetailComponent, LoginComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

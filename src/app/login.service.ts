@@ -3,8 +3,8 @@ import { map, Observable, of } from 'rxjs';
 import { User } from './login/user';
 
 const USERS = [
-  new User(1, 'user1', 'user1'),
-  new User(2, 'user2', 'user2')
+  new User(1, "user1", "user1"),
+  new User(2, "user2", "user2")
 ];
 const usersObservable = of(USERS);
 @Injectable({

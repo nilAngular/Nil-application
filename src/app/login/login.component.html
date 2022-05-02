@@ -4,7 +4,7 @@
 </div>
 <br />
 <div style="position: relative; left: 20px">
-  <form  (ngSubmit)="onFormSubmit()">
+  <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
     <p>User Name <input formControlName="username" /></p>
     <p>
       Password

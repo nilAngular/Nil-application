@@ -8,7 +8,7 @@ import { LoginGuardService } from './login-guard.service';
 const appRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'books', component: BookComponent, canActivate:[LoginGuardService]  },
+    { path: 'books', loadChildren:() => import('./book/book.module').then(m => m.BookModule) },
     { path: 'detail/:id', component: BookDetailComponent },
     {path: 'login',component:LoginComponent}
 ];

@@ -13,14 +13,17 @@ const usersObservable = of(USERS);
 export class LoginService {
 
   constructor() { }
-  private isloggedIn = false;
-    getAllUsers(): Observable<User[]> {
+    private isloggedIn=false;
+    
+    getAllUsers():Observable<User[]>{
         return usersObservable;
     }
-    isUserAuthenticated(username: string, password: string): Observable<boolean> {
+    
+    isUserAuthenticated(username:string,password:string):Observable<boolean>{
+
         return this.getAllUsers().pipe(
-            map(users => {
-                const Authenticateduser = users.find(user => (user.username === username) && (user.password === password));
+            map(users =>{
+                const Authenticateduser =users.find(user => (user.username === username) && (user.password === password));
                 if (Authenticateduser) {
                     this.isloggedIn = true;
                 } else {
@@ -28,7 +31,8 @@ export class LoginService {
                 }
                 return this.isloggedIn;
             })
-        );
+
+        )
     }
     isUserLoggedIn(): boolean {
         return this.isloggedIn;

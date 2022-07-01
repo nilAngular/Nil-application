@@ -1,6 +1,17 @@
 <h2>My Books</h2>
-<ul class="books">
-  <li *ngFor="let book of books">
+<div>
+  <mat-slide-toggle [(ngModel)]="isChecked" class="toggle">
+   Show all books
+  </mat-slide-toggle>
+  <br />
+</div>
+<ul *ngIf="isChecked" class="books">
+  <li *ngFor="let book of books">  
+    <span class="badge">{{ book.id }}</span> {{ book.name }}
+  </li>
+</ul>
+<ul *ngIf="!isChecked" class="books">
+  <li *ngFor="let book of books | slice:0:5">  
     <span class="badge">{{ book.id }}</span> {{ book.name }}
   </li>
 </ul>

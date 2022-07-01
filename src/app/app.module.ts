@@ -8,8 +8,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
-  imports: [BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [BrowserModule,
+     HttpClientModule,
+     FormsModule,
+      ReactiveFormsModule, 
+      AppRoutingModule, 
+      BrowserAnimationsModule],
+
+     
   declarations: [AppComponent, DashboardComponent, BookDetailComponent, LoginComponent],
   providers: [],
   bootstrap: [AppComponent]
